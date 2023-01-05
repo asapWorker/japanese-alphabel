@@ -1,0 +1,30 @@
+.task {
+  width: 100vw;
+  height: 100vh;
+}
+
+.transcription {
+  padding: 3vh 0;
+  border-bottom: 0.5vmin solid #ccccce;
+
+  text-align: center;
+}
+
+.letter-options-container {
+  width: 60%;
+  height: 60%;
+  margin: 3% auto;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.letter-option {
+  width: 48%;
+  height: 40%;
+  border: 0.5vmin solid  #4364b6;
+  border-radius: 1vmin;
+}
