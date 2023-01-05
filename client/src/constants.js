@@ -7,7 +7,7 @@ export const ACTIVE = 'active';
 
 // letters learning statuses
 export const UNUSED = 'unused';
-export const PENDING = 'pending';
+export const USED = 'used';
 
 // train btn content
 export const LEARN = 'Учить';

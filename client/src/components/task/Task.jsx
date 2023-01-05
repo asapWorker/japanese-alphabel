@@ -1,24 +1,46 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useEffect, useState} from "react";
 import "./Task.css";
 import {useSelector} from "react-redux";
-import {takeSubArray} from "../../functions";
+import {random, takeSubArray} from "../../functions";
 import {ANSWER_OPTIONS_COUNT, FINISH, NEXT} from "../../constants";
 
 export function Task(props) {
   const [taskNo, setTaskNo] = useState(0);
   const [tasks, setTasks] = useState(null);
 
+  const alphabet = useSelector(state => state.alphabet.alphabet);
   const lettersToTrain = useSelector(state => state.alphabet.lettersToTrain);
 
   useEffect(() => {
     const list = [];
 
     for (let i = 0; i < lettersToTrain.length; i++) {
-      const task = takeSubArray(lettersToTrain, i, ANSWER_OPTIONS_COUNT);
+      const task = takeSubArray(lettersToTrain, Math.min(ANSWER_OPTIONS_COUNT, lettersToTrain.length), i);
+
+      // add missing options
+      const missingOptionsCount = ANSWER_OPTIONS_COUNT - lettersToTrain.length;
+
+      if (missingOptionsCount > 0) {
+        const missingOptions = [];
+        const letterIndInAlphabet = alphabet.indexOf(lettersToTrain[lettersToTrain.length - 1]);
+
+        for (let i = 1; (i < alphabet.length) && missingOptions; i++) {
+          const currentInd = (letterIndInAlphabet + i) % alphabet.length;
+          if (alphabet[currentInd]) {
+            missingOptionsCount--;
+            missingOptions.push(alphabet[currentInd]);
+          }
+        }
+        
+        if (random(2)) {
+          task = [...missingOptions, ...task];
+        } else {
+          task.push(...missingOptions);
+        }
+      }
+
       list.push(task);
     }
-    console.log(lettersToTrain);
-    console.log(list);
 
     setTasks(list);
   }, [])

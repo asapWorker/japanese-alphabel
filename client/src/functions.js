@@ -2,7 +2,7 @@ export const random = function (n) {
   return Math.floor(Math.random() * n);
 }
 
-export const takeSubArray = function (arr, start, count) {
+export const takeSubArray = function (arr, count, start) {
   const subArr = new Array(count).fill(null);
 
   const startPositionInSubArr = random(count);

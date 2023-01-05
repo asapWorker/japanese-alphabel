@@ -2,42 +2,42 @@ import React, {useEffect, useMemo, useRef} from "react";
 import "./Menu.css";
 import {Letter} from "../letter/Letter";
 import {useDispatch, useSelector} from "react-redux";
-import {ACTIVE, HIRAGANA, KATAKANA, LEARN, PENDING, REVISE, UNUSED} from "../../constants";
+import {ACTIVE, HIRAGANA, KATAKANA, LEARN, REVISE, USED, UNUSED} from "../../constants";
 import {changeType, setAlphabet, setLettersToTrain} from "../../store/alphabetSlice";
 
 function checkIfLetterMatchToStatus(letter, status) {
   if (!letter) return false;
-  if (status === PENDING) {
-    if (letter.level >= 5 && Date.now() - letter.lastCall >= letter.timeout) {
+  if (status === USED) {
+    if (letter.level > 0 && (Date.now() - letter.lastCall >= letter.timeout)) {
       return true;
     } else return false;
   } else if (status === UNUSED) {
-    if (letter.level <= 4) return true;
+    if (letter.level === 0) return true;
     else return false;
   }
   return false;
 }
 
-function updateTimeInfo(letter) {
-  letter.lastCall = Date.now();
-}
-
 function makeLettersListMatchingStatus(letters, status) {
   const lettersToTrain = [];
-  for (let i = 0; i < letters.length; i++) {
+  let count = 0;
+  for (let i = 0; (i < letters.length); i++) {
     if (checkIfLetterMatchToStatus(letters[i], status)) {
       lettersToTrain.push(letters[i]);
+      count++;
+      if (count % 5 === 0) {
+        if (i === letters.length - 2) continue;
+        else break;
+      }
     }
   }
   return lettersToTrain;
 }
 function checkAreWhereLettersMatchingStatus(letters, status) {
-  let count = 0;
   for (let i = 0; i < letters.length; i++) {
     if (letters[i]) {
       if (checkIfLetterMatchToStatus(letters[i], status)) {
-        count++;
-        if (count === 4) return true;
+        return true;
       }
     }
   }
@@ -67,14 +67,12 @@ export function Menu(props){
     fetch('http://localhost:5000/')
     .then(response => response.json())
     .then(data => {
-      if (checkAreWhereLettersMatchingStatus(data[HIRAGANA], PENDING)) {
+      dispatch(setAlphabet(data));
+      if (checkAreWhereLettersMatchingStatus(alphabet[HIRAGANA], USED)) {
         isPendingLearningStatus[HIRAGANA] = true;
-      }
-      if (checkAreWhereLettersMatchingStatus(data[KATAKANA], PENDING)) {
+      } else if (checkAreWhereLettersMatchingStatus(alphabet[KATAKANA], USED)) {
         isPendingLearningStatus[KATAKANA] = true;
       }
-
-      dispatch(setAlphabet(data));
     })
     .catch(() => console.log('error'))
   }, [])
@@ -117,7 +115,12 @@ export function Menu(props){
   }
 
   function trainBtnClickHandler() {
-    const lettersToTrain = makeLettersListMatchingStatus(alphabet[alphabetType], UNUSED);
+    let lettersToTrain = null;
+    if (isPendingLearningStatus[alphabetType]) {
+      lettersToTrain = makeLettersListMatchingStatus(alphabet[alphabetType], USED);
+    } else {
+      lettersToTrain = makeLettersListMatchingStatus(alphabet[alphabetType], UNUSED);
+    }
     dispatch(setLettersToTrain(lettersToTrain));
     props.changeAppScreen();
   }
