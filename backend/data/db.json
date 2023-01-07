@@ -328,5 +328,333 @@
             "level": 0			
         }
     ],
-    "katakana": []
+    "katakana": [
+        {
+            "symbol": "ア",
+            "transcription": "а",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0 
+        },
+        {
+            "symbol": "イ",
+            "transcription": "и",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0 
+        },
+        {
+            "symbol": "ウ",
+            "transcription": "у",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0 
+        },
+        {
+            "symbol": "エ",
+            "transcription": "э",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0 
+        },
+        {
+            "symbol": "オ",
+            "transcription": "о",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0 
+        },
+        {
+            "symbol": "カ",
+            "transcription": "ка",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "キ",
+            "transcription": "ки",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "ク",
+            "transcription": "ку",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "ケ",
+            "transcription": "кэ",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "コ",
+            "transcription": "ко",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "サ",
+            "transcription": "са",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "シ",
+            "transcription": "ши",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "ス",
+            "transcription": "су",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "セ",
+            "transcription": "сэ",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "ソ",
+            "transcription": "со",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "タ",
+            "transcription": "та",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "チ",
+            "transcription": "ти",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "ツ",
+            "transcription": "тсю",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "テ",
+            "transcription": "тэ",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "ト",
+            "transcription": "то",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "ナ",
+            "transcription": "на",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "ニ",
+            "transcription": "ни",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "ヌ",
+            "transcription": "ню",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },{
+            "symbol": "ネ",
+            "transcription": "нэ",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "ノ",
+            "transcription": "но",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "ハ",
+            "transcription": "ха",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "ヒ",
+            "transcription": "хи",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "フ",
+            "transcription": "хю",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "ヘ",
+            "transcription": "хэ",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "ホ",
+            "transcription": "хо",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "マ",
+            "transcription": "ма",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "ミ",
+            "transcription": "ми",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "ム",
+            "transcription": "мю",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "メ",
+            "transcription": "мэ",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "モ",
+            "transcription": "мо",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "ヤ",
+            "transcription": "я",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        null,
+        {
+            "symbol": "ユ",
+            "transcription": "ю",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        null,
+        {
+            "symbol": "ヨ",
+            "transcription": "йо",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+
+        {
+            "symbol": "ラ",
+            "transcription": "ря",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "リ",
+            "transcription": "ри",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "ル",
+            "transcription": "рю",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "レ",
+            "transcription": "рэ",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "ロ",
+            "transcription": "ро",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "ワ",
+            "transcription": "ува",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        null,
+        null,
+        null,
+        {
+            "symbol": "ヲ",
+            "transcription": "оо",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        },
+        {
+            "symbol": "ン",
+            "transcription": "н",
+            "lastCall": -1,
+            "timeout": 0,
+            "level": 0			
+        }
+    ]
 }
