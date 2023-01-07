@@ -4,10 +4,13 @@
 }
 
 .transcription {
-  padding: 3vh 0;
+  height: 10%;
+  padding: 2vh 0;
   border-bottom: 0.5vmin solid #ccccce;
 
   text-align: center;
+
+  font-size: 1.3rem;
 }
 
 .letter-options-container {
@@ -27,4 +30,23 @@
   height: 40%;
   border: 0.5vmin solid  #4364b6;
   border-radius: 1vmin;
+
+  font-size: 2rem;
+}
+
+.letter-option.correct {
+  background-color: #bef3b9;
+  border-color: #45af6e;
+}
+
+.letter-option.wrong {
+  background-color: #f8c7c7;
+  border-color: #d16c7a;
+}
+
+.next-btn.correct {
+  background-color: #45af6e;
+}
+.next-btn.wrong {
+  background-color: #d16c7a;
 }

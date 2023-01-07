@@ -26,9 +26,19 @@
   align-items: center;
 }
 
+.letter.correct {
+  background-color: #bef3b9;
+  border-color: #45af6e;
+}
+
+.letter.wrong {
+  background-color: #f8c7c7;
+  border-color: #d16c7a;
+}
+
 .letter-transcription {
   font-size: 0.8rem;
-  color: #626265;
+  color: #a6a6a8;
 }
 
 /* progress */

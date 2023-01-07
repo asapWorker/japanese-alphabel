@@ -3,7 +3,7 @@ import "./Menu.css";
 import {Letter} from "../letter/Letter";
 import {useDispatch, useSelector} from "react-redux";
 import {ACTIVE, HIRAGANA, KATAKANA, LEARN, REVISE, USED, UNUSED} from "../../constants";
-import {changeType, setAlphabet, setLettersToTrain} from "../../store/alphabetSlice";
+import {changeType, resetChangeLetterProperty, setAlphabet, setLettersToTrain, updateLetterInfo} from "../../store/alphabetSlice";
 
 function checkIfLetterMatchToStatus(letter, status) {
   if (!letter) return false;
@@ -20,12 +20,15 @@ function checkIfLetterMatchToStatus(letter, status) {
 
 function makeLettersListMatchingStatus(letters, status) {
   const lettersToTrain = [];
-  let count = 0;
   for (let i = 0; (i < letters.length); i++) {
     if (checkIfLetterMatchToStatus(letters[i], status)) {
-      lettersToTrain.push(letters[i]);
-      count++;
-      if (count % 5 === 0) {
+      lettersToTrain.push({
+        symbol: letters[i].symbol,
+        transcription: letters[i].transcription,
+        indInAlphabet: i,
+        level: letters[i].level
+      });
+      if ((i + 1) % 5 === 0) {
         if (i === letters.length - 2) continue;
         else break;
       }
@@ -61,21 +64,29 @@ export function Menu(props){
 
   const alphabetType = useSelector(state => state.alphabet.type);
   const alphabet = useSelector(state => state.alphabet.alphabet);
+  const lettersToTrain = useSelector(state => state.alphabet.lettersToTrain);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    fetch('http://localhost:5000/')
-    .then(response => response.json())
-    .then(data => {
-      dispatch(setAlphabet(data));
+    if (!alphabet) {
+      fetch('http://localhost:5000/')
+      .then(response => response.json())
+      .then(data => {
+        dispatch(setAlphabet(data));
+      })
+      .catch(() => console.log('error'))
+    }
+  }, [])
+
+  useEffect(() => {
+    if (alphabet) {
       if (checkAreWhereLettersMatchingStatus(alphabet[HIRAGANA], USED)) {
-        isPendingLearningStatus[HIRAGANA] = true;
+      isPendingLearningStatus[HIRAGANA] = true;
       } else if (checkAreWhereLettersMatchingStatus(alphabet[KATAKANA], USED)) {
         isPendingLearningStatus[KATAKANA] = true;
       }
-    })
-    .catch(() => console.log('error'))
-  }, [])
+    }
+  }, [alphabet])
 
   return(
     (!alphabet) ? <div>Loading...</div> :
@@ -115,13 +126,21 @@ export function Menu(props){
   }
 
   function trainBtnClickHandler() {
-    let lettersToTrain = null;
-    if (isPendingLearningStatus[alphabetType]) {
-      lettersToTrain = makeLettersListMatchingStatus(alphabet[alphabetType], USED);
-    } else {
-      lettersToTrain = makeLettersListMatchingStatus(alphabet[alphabetType], UNUSED);
+    if (lettersToTrain) {
+      for (let letter of lettersToTrain) {
+        dispatch(resetChangeLetterProperty(letter.indInAlphabet));
+      }
     }
-    dispatch(setLettersToTrain(lettersToTrain));
+
+    let newLettersToTrain = null;
+
+    if (isPendingLearningStatus[alphabetType]) {
+      newLettersToTrain = makeLettersListMatchingStatus(alphabet[alphabetType], USED);
+    } else {
+      newLettersToTrain = makeLettersListMatchingStatus(alphabet[alphabetType], UNUSED);
+    }
+
+    dispatch(setLettersToTrain(newLettersToTrain));
     props.changeAppScreen();
   }
 }
