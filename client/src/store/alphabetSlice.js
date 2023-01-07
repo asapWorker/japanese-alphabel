@@ -5,6 +5,7 @@ const alphabetSlice = createSlice({
   name: 'alphabet',
   initialState: {
     type: HIRAGANA,
+    _prevType: HIRAGANA,
     alphabet: null,
     lettersToTrain: null
   },
@@ -30,18 +31,20 @@ const alphabetSlice = createSlice({
     },
 
     updateLetterInfo(state, action) {
+      state._prevType = state.type;
+
       state.alphabet[state.type][action.payload.indInAlphabet] = {
         ...state.alphabet[state.type][action.payload.indInAlphabet],
         level: action.payload.level,
         change: action.payload.answerStatus,
         lastCall: Date.now(),
-        timeout: TIMIOUT_FROM_LEVEL[action.payload.level]
+        timeout: TIMIOUT_FROM_LEVEL[action.payload.level],
       }
     },
 
     resetChangeLetterProperty(state, action) {
-      state.alphabet[state.type][action.payload] = {
-        ...state.alphabet[state.type][action.payload],
+      state.alphabet[state._prevType][action.payload] = {
+        ...state.alphabet[state._prevType][action.payload],
         change: false
       }
     }

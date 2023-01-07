@@ -75,6 +75,31 @@ export function Menu(props){
         dispatch(setAlphabet(data));
       })
       .catch(() => console.log('error'))
+    } else {
+      // form changes data to send by network
+      const changes = {
+        alphabetType,
+        letters: null
+      }
+
+      changes.letters = lettersToTrain.map(item => {
+        return {
+          ind: item.indInAlphabet,
+          content: {
+            ...alphabet[alphabetType][item.indInAlphabet],
+            change: false
+          }
+        }
+      })
+
+      // send changes
+      fetch('http://localhost:5000/', {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(changes)
+      }).catch((error) => console.log(error.message));
     }
   }, [])
 
