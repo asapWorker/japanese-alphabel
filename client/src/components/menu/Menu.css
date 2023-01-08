@@ -26,7 +26,7 @@
 
 .alphabet-container {
   width: 100%;
-  height: 66%;
+  height: 70%;
   padding: 1% 20% 3%;
   margin: 3% 0;
 
@@ -35,6 +35,22 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+@media (orientation: portrait) {
+  @media (max-width: 768px) {
+    .alphabet-container {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+
+  @media (max-width: 480) {
+    .alphabet-container {
+      padding-left: 3%;
+      padding-right: 3%;
+    }
+  }
 }
 
 

@@ -10,7 +10,7 @@
 html {
   width: 100vw;
   height: 100vh;
-  font-size: 30px;
+  font-size: 50px;
 }
 
 body {
@@ -22,7 +22,7 @@ body {
 }
 
 button {
-  font-size: 30px;
+  font-size: 50px;
   font-family: sans-serif;
 }
 
@@ -49,4 +49,63 @@ button {
 }
 
 
+@media (max-height: 1600px) {
+  html {
+    font-size: 40px;
+  }
+
+  button {
+    font-size: 40px;
+  }
+}
+
+@media (max-height: 1280px) {
+  html {
+    font-size: 30px;
+  }
+
+  button {
+    font-size: 30px;
+  }
+}
+
+@media (max-height: 920px) {
+  html {
+    font-size: 25px;
+  }
+
+  button {
+    font-size: 25px;
+  }
+}
+
+@media (max-height: 768px) {
+  html {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 20px;
+  }
+}
+
+@media (max-height: 480px) {
+  html {
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+}
+
+@media (max-height: 320px) {
+  html {
+    font-size: 10px;
+  }
+
+  button {
+    font-size: 12px;
+  }
+}
 

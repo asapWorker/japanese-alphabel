@@ -5,7 +5,7 @@
 
 .empty-item {
   width: 10vmin;
-  height: 12vmin;
+  height: 12vh;
   background-color: #e4e7e7;
   padding: calc(1vmin + 2px) calc(0.5vmin + 2px);
   border-radius: 6px;
@@ -14,8 +14,8 @@
 
 .letter {
   width: 10vmin;
-  height: 12vmin;
-  padding: 1vmin 0.5vmin;
+  height: 12vh;
+  padding: 1vh 0.5vmin;
   border: 0.3vmin solid #4364b6;
   border-radius: 6px;
   margin: auto;
@@ -64,3 +64,22 @@
   background-color: #ffaf16;
 }
 
+@media (orientation: portrait) {
+  .empty-item {
+    width: 12vw;
+  }
+
+  .letter {
+    width: 12vw;
+  }
+
+  @media (max-width: 768px) {
+    .empty-item {
+      width: 15vw;
+    }
+
+    .letter {
+      width: 15vw;
+    }
+  }
+}
