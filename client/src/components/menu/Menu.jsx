@@ -114,7 +114,7 @@ export function Menu(props){
   }, [alphabet])
 
   return(
-    (!alphabet) ? <div>Loading...</div> :
+    (!alphabet) ? <div className="spinner"/> :
     <div className='menu'>
       <div className='alphabet-choosing-container top-interface'>
         <button

@@ -64,7 +64,7 @@ export function Task(props) {
   }, [taskNo])
 
   return (
-    (!tasks) ? <div>Loading...</div> :
+    (!tasks) ? <div className="spinner"/> :
     <div className='task'>
       <div className='transcription top-interface'>
         {`[ ${lettersToTrain[taskNo].transcription} ]`}
