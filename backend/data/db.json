@@ -79,7 +79,7 @@
         },
         {
             "symbol": "し",
-            "transcription": "ши",
+            "transcription": "си",
             "lastCall": -1,
             "timeout": 0,
             "level": 0			
@@ -121,7 +121,7 @@
         },
         {
             "symbol": "つ",
-            "transcription": "тсю",
+            "transcription": "цу",
             "lastCall": -1,
             "timeout": 0,
             "level": 0			
@@ -156,7 +156,7 @@
         },
         {
             "symbol": "ぬ",
-            "transcription": "ню",
+            "transcription": "ну",
             "lastCall": -1,
             "timeout": 0,
             "level": 0			
@@ -190,7 +190,7 @@
         },
         {
             "symbol": "ふ",
-            "transcription": "хю",
+            "transcription": "фу",
             "lastCall": -1,
             "timeout": 0,
             "level": 0			
@@ -225,7 +225,7 @@
         },
         {
             "symbol": "む",
-            "transcription": "мю",
+            "transcription": "му",
             "lastCall": -1,
             "timeout": 0,
             "level": 0			
@@ -262,7 +262,7 @@
         null,
         {
             "symbol": "よ",
-            "transcription": "йо",
+            "transcription": "ё",
             "lastCall": -1,
             "timeout": 0,
             "level": 0			
@@ -270,7 +270,7 @@
 
         {
             "symbol": "ら",
-            "transcription": "ря",
+            "transcription": "ра",
             "lastCall": -1,
             "timeout": 0,
             "level": 0			
@@ -284,7 +284,7 @@
         },
         {
             "symbol": "る",
-            "transcription": "рю",
+            "transcription": "ру",
             "lastCall": -1,
             "timeout": 0,
             "level": 0			
@@ -305,7 +305,7 @@
         },
         {
             "symbol": "わ",
-            "transcription": "ува",
+            "transcription": "ва",
             "lastCall": -1,
             "timeout": 0,
             "level": 0			
@@ -315,7 +315,7 @@
         null,
         {
             "symbol": "を",
-            "transcription": "оо",
+            "transcription": "во/о",
             "lastCall": -1,
             "timeout": 0,
             "level": 0			
@@ -408,7 +408,7 @@
         },
         {
             "symbol": "シ",
-            "transcription": "ши",
+            "transcription": "си",
             "lastCall": -1,
             "timeout": 0,
             "level": 0			
@@ -450,7 +450,7 @@
         },
         {
             "symbol": "ツ",
-            "transcription": "тсю",
+            "transcription": "цу",
             "lastCall": -1,
             "timeout": 0,
             "level": 0			
@@ -485,7 +485,7 @@
         },
         {
             "symbol": "ヌ",
-            "transcription": "ню",
+            "transcription": "ну",
             "lastCall": -1,
             "timeout": 0,
             "level": 0			
@@ -519,7 +519,7 @@
         },
         {
             "symbol": "フ",
-            "transcription": "хю",
+            "transcription": "фу",
             "lastCall": -1,
             "timeout": 0,
             "level": 0			
@@ -554,7 +554,7 @@
         },
         {
             "symbol": "ム",
-            "transcription": "мю",
+            "transcription": "му",
             "lastCall": -1,
             "timeout": 0,
             "level": 0			
@@ -591,7 +591,7 @@
         null,
         {
             "symbol": "ヨ",
-            "transcription": "йо",
+            "transcription": "ё",
             "lastCall": -1,
             "timeout": 0,
             "level": 0			
@@ -599,7 +599,7 @@
 
         {
             "symbol": "ラ",
-            "transcription": "ря",
+            "transcription": "ра",
             "lastCall": -1,
             "timeout": 0,
             "level": 0			
@@ -613,7 +613,7 @@
         },
         {
             "symbol": "ル",
-            "transcription": "рю",
+            "transcription": "ру",
             "lastCall": -1,
             "timeout": 0,
             "level": 0			
@@ -634,7 +634,7 @@
         },
         {
             "symbol": "ワ",
-            "transcription": "ува",
+            "transcription": "ва",
             "lastCall": -1,
             "timeout": 0,
             "level": 0			
@@ -644,7 +644,7 @@
         null,
         {
             "symbol": "ヲ",
-            "transcription": "оо",
+            "transcription": "о",
             "lastCall": -1,
             "timeout": 0,
             "level": 0			
