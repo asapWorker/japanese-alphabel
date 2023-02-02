@@ -6,7 +6,7 @@
 - The game implements spaced repetitions
 
 #### Demo
-https://user-images.githubusercontent.com/82396187/216369053-324abf41-a5a8-4250-8597-af98386a312f.mp4
+![2023-02-02-18-23-49_Trim](https://user-images.githubusercontent.com/82396187/216369270-b0beb79b-408e-4e8d-8f45-79b3a23c16e4.gif)
 
 #### Used technologies
 - html
